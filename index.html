@@ -18,6 +18,12 @@
       text-align: center;
       color: #333;
     }
+    .scoring-guide {
+      margin-bottom: 20px;
+      padding: 10px;
+      background: #eef;
+      border-radius: 5px;
+    }
     .question {
       margin-bottom: 20px;
     }
@@ -45,11 +51,29 @@
     button:hover {
       background: #005fa3;
     }
+    .course-link {
+      margin-top: 15px;
+      text-align: center;
+    }
+    .course-link a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
   <h1>2分でわかる！管理職タイプ診断</h1>
+
+  <div class="scoring-guide">
+    <strong>スコアの付け方：</strong><br>
+    1 = 全く当てはまらない ／ 
+    2 = あまり当てはまらない ／ 
+    3 = どちらともいえない ／ 
+    4 = まあ当てはまる ／ 
+    5 = 非常に当てはまる
+  </div>
 
   <form id="diagnosisForm">
     <div class="question">
@@ -140,10 +164,10 @@
       }
 
       document.getElementById("result").innerHTML =
-        "<h2>診断結果: " + type + "</h2><p>" + message + "</p>";
+        "<h2>診断結果: " + type + "</h2><p>" + message + "</p>" +
+        '<div class="course-link"><a href="https://communication-energy.net/4d0b663bb9764d648375280c3f4ad937" target="_blank">👉 講座の詳細はこちら</a></div>';
     }
   </script>
 
 </body>
 </html>
-
